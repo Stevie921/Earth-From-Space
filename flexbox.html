@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flexbox Practice</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<div id="main">
+	   <div class="row">
+		<div>
+			<img src="Images/Morocco.jpg"/>
+			<p>The Errachidia Province in east central Morocco is pictured from the International Space Station as it orbited 261 miles above.</p>
+		</div>
+		<div>
+			<img src="Images/Ireland.jpg"/>
+			<p>On August 7, 2003, the NASA Aqua MODIS instrument acquired this image of Ireland on the first day this summer that most of the island hasn´t been completely obscured by cloud cover.</p>
+		</div>
+		<div>
+			<img src="Images/Japan.jpg"/>
+			<p>The Moderate Resolution Imaging Spectroradiometer (MODIS) on the Aqua satellite captured this stunning view of Japan’ four largest islands on February 20, 2004. The snow-covered southern arm of Hokkaido extends into the upper left corner.</p>
+		</div>
+	   </div>
+	</div>
+
+</body>
+
+<script>
+	let captions = Array.from(document.querySelectorAll("p"));
+    let images = Array.from(document.getElementsByTagName("img"));
+
+	function showCaption(e){
+      let currentOpacity = window.getComputedStyle(e.target.nextElementSibling).opacity; 
+      let currentCaption = e.target.nextElementSibling;
+      currentOpacity == 0 ? currentCaption.style.opacity = 1 : currentCaption.style.opacity = 0;
+	}
+
+	images.map(image => image.addEventListener("click",showCaption));
+
+	
+</script>
+</html>

@@ -1,0 +1,27 @@
+.row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.row div {
+   width: 33%;
+   position: relative;
+}
+
+img {
+	width: 100%;
+
+}
+
+p {
+   font-family: "Century Gothic";
+   text-align: center;
+   position: relative;
+   bottom: 125px;
+   background: rgba(1,1,1,0.5);
+   color: #fff;
+   padding: 8px;
+   letter-spacing: 2px;
+   opacity: 0;
+   transition: opacity 2s;
+}
