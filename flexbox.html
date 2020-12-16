@@ -29,14 +29,24 @@
 	let captions = Array.from(document.querySelectorAll("p"));
     let images = Array.from(document.getElementsByTagName("img"));
 
+    //SETS THE POSITION OF EACH CAPTION TO BE AT THE BOTTOM OF THE CORRESPONDING IMAGE
+    function setPosition(){
+     for(let i = 0; i < captions.length; i++){
+      captions[i].style.bottom = `${captions[i].getBoundingClientRect().bottom - images[i].getBoundingClientRect().bottom}px`;
+     }
+    }
+  
+
+    //FADE THE CAPTION IN AND OUT WHEN EACH IMAGE IS CLICKED
 	function showCaption(e){
-      let currentOpacity = window.getComputedStyle(e.target.nextElementSibling).opacity; 
-      let currentCaption = e.target.nextElementSibling;
+      const currentOpacity = window.getComputedStyle(e.target.nextElementSibling).opacity; 
+      const currentCaption = e.target.nextElementSibling;
+   
       currentOpacity == 0 ? currentCaption.style.opacity = 1 : currentCaption.style.opacity = 0;
-	}
+    }
 
 	images.map(image => image.addEventListener("click",showCaption));
-
+    setPosition();
 	
 </script>
 </html>
