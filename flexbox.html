@@ -20,8 +20,37 @@
 			<img src="Images/Japan.jpg"/>
 			<p>The Moderate Resolution Imaging Spectroradiometer (MODIS) on the Aqua satellite captured this stunning view of Japan’ four largest islands on February 20, 2004. The snow-covered southern arm of Hokkaido extends into the upper left corner.</p>
 		</div>
-	   </div>
-	</div>
+      </div>
+        <div class="row">
+		<div>
+			<img src="Images/Everest.jpg"/>
+			<p>Mount Everest region, Nepal and China. Low morning Sun highlights Mount Everest (the highest mountain in the world at 8,848 meters)</p>
+		</div>
+		<div>
+			<img src="Images/California.jpg"/>
+			<p>Los Angeles-Long Beach area of southern California, as photographed from the Apollo 9 spacecraft during its 92nd revolution of Earth.</p>
+		</div>
+		<div>
+			<img src="Images/Africa.jpg"/>
+			<p>In this scene of the south coast of Africa, Cape Agulhas, the southernmost point on the continent, appears as the leftmost cape.</p>
+		</div>
+      </div>
+      <div class="row">
+		<div>
+			<img src="Images/Florida.jpg"/>
+			<p>This oblique view of the Florida peninsula was photographed from the Earth-orbiting Space Shuttle Discovery during the DOD-devoted mission. Many popular features of the state can be delineated in the scene. Kennedy Space Center (KSC), from which this and all Space Shuttle missions are launched, is on the jutting Cape Canaveral, visible on the east Atlantic Coast. </p>
+		</div>
+		<div>
+			<img src="Images/Iceland.jpg"/>
+			<p>Iceland, dressed in winter white, peaked through a hole in a complex system of clouds in late February, 2015. Ice and snow covers Iceland almost entirely, except for coastal regions in the southwest and southeast. </p>
+		</div>
+		<div>
+			<img src="Images/Asia.jpg"/>
+			<p>Sand dunes near Mongolia's Har Lake are featured in this image photographed by an Expedition 13 crewmember on the International Space Station. </p>
+		</div>
+      </div>
+
+	</div> <!-- MAIN END -->
 
 </body>
 
@@ -37,16 +66,7 @@
     }
   
 
-    //FADE THE CAPTION IN AND OUT WHEN EACH IMAGE IS CLICKED
-	function showCaption(e){
-      const currentOpacity = window.getComputedStyle(e.target.nextElementSibling).opacity; 
-      const currentCaption = e.target.nextElementSibling;
-   
-      currentOpacity == 0 ? currentCaption.style.opacity = 1 : currentCaption.style.opacity = 0;
-    }
-
-	images.map(image => image.addEventListener("click",showCaption));
-    setPosition();
+   setPosition();
 	
 </script>
 </html>
